@@ -1,0 +1,9 @@
+Model name,Min val loss
+MiniGPT v1,6.072540760040283
+MiniGPT v2,5.8687639236450195
+MiniGPT v3,5.766775131225586
+bart-large-mnli,0.8235294117647058
+nli-deberta-v3-small,0.9411764705882353
+nli-deberta-v3-small hyp_temp 1,1.0
+nli-deberta-v3-small hyp_temp 2,1.0
+nli-deberta-v3-small conf treshold,0.6470588235294118
