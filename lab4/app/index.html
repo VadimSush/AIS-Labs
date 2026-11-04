@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Тестувальник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Тестувальник: Розв'язання тестів</h1>
+        
+        <div class="form-group">
+            <label for="mode">Оберіть тип завдання:</label>
+            <select id="mode">
+                <option value="single_choice">Вибір одного варіанту</option>
+                <option value="multiple_choice">Вибір декількох варіантів</option>
+                <option value="matching">Встановлення відповідностей (1-А, 2-Б)</option>
+                <option value="ordering">Встановлення послідовності</option>
+                <option value="short_answer">Коротка відповідь (без варіантів)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="question">Запитання або умова завдання:</label>
+            <textarea id="question" rows="3" placeholder="Введіть суть питання..."></textarea>
+        </div>
+
+        <div id="dynamicFields" class="form-group">
+            <label id="dynamicTitle">Варіанти відповідей:</label>
+            <div id="fieldsContainer"></div>
+            <button id="addFieldBtn" type="button" class="btn-secondary">+ Додати варіант</button>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="reasoningMode">
+            <label for="reasoningMode">Увімкнути режим міркування</label>
+        </div>
+
+        <button id="submitBtn" class="btn-primary">Отримати розв'язання</button>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Модель генерує відповідь...</p>
+        </div>
+
+        <div id="errorBox" class="hidden error"></div>
+        
+        <div id="resultBox" class="hidden result">
+            <h3>Результат:</h3>
+            <div id="answerContent"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
